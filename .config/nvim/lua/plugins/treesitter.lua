@@ -1,7 +1,11 @@
-local config = require("nvim-treesitter.configs")
-config.setup({
+return {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    opts = {
 
-	auto_install = true,
-	highlight = { enable = true },
-	indent = { enable = true },
-})
+        ensure_installed = { "markdown", "markdown_inline" },
+        highlight = {
+            enable = true,
+        },
+    },
+}
