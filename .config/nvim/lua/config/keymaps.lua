@@ -12,9 +12,8 @@ vim.keymap.set("n", "<leader>fw", ":Telescope live_grep<cr>")
 vim.keymap.set("n", "<leader>fo", ":Telescope oldfiles<cr>")
 vim.keymap.set("n", "<leader>fb", ":Telescope buffers<cr>")
 
--- NeoTree
-vim.keymap.set("n", "<leader>t", ":Neotree <cr>")
-vim.keymap.set("n", "<leader>b", ":Neotree buffers<cr>")
+-- Oil
+vim.keymap.set("n", "<leader>e", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 
 -- convert note to template and remove leading white space
 vim.keymap.set("n", "<leader>on", ":ObsidianTemplate note<cr> :lua vim.cmd([[1,/^\\S/s/^\\n\\{1,}//]])<cr>")
